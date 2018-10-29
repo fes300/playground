@@ -8,13 +8,6 @@ type AI = {
   variable: boolean;
 };
 
-const gs1128SgtinRegExp = /^01(\d{14})21(\d+)$/;
-const datamatrixSgtinRegExp = /^01(\d+)21(\d+)10([\w|\s]+)240([\w|\s]+)$/;
-const sscc18RegExp = /^00(\d{18})$/;
-const sgtinPrefix = "urn:epc:id:sgtin:";
-const ssccPrefix = "urn:epc:id:sscc:";
-const uriSgtinRegExp = /^urn:epc:id:sgtin:(\d+).(\d+).(\d+)$/;
-
 const possibleAIs: Array<AI> = [
   {
     id: "00",
@@ -472,6 +465,8 @@ const possibleAIs: Array<AI> = [
   }
 ];
 
+export const groupSeparator = String.fromCharCode(29);
+
 export function parseGS1Barcode(
   barcode: string,
   results: Array<{ id: string; value: string }> = []
@@ -508,7 +503,7 @@ function getAiValue(
   AI: AI
 ): { value: string; strippedBarcode: string } {
   if (AI.variable) {
-    const index = barcode.indexOf("%");
+    const index = barcode.indexOf(groupSeparator);
 
     const value = barcode.substr(
       AI.id.length,

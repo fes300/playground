@@ -4706,6 +4706,12 @@ moment@>=1.6.0:
   version "2.22.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
 
+monocle-ts@^1.0.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/monocle-ts/-/monocle-ts-1.3.0.tgz#4e463efaaae8d8e988c0ce886cd1514f54158f59"
+  dependencies:
+    fp-ts "^1.0.0"
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -4788,6 +4794,13 @@ negotiator@0.6.1:
 neo-async@^2.5.0:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.5.2.tgz#489105ce7bc54e709d736b195f82135048c50fcc"
+
+newtype-ts@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/newtype-ts/-/newtype-ts-0.2.1.tgz#9a88a721b2bf3bb4f2ab34db733be359190a634d"
+  dependencies:
+    fp-ts "^1.0.0"
+    monocle-ts "^1.0.0"
 
 next-tick@1:
   version "1.0.0"
